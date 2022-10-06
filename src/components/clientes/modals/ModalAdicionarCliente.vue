@@ -32,7 +32,7 @@
 <script setup>
 import { reactive } from "vue"
 import { storeToRefs } from "pinia"
-import { useCustomers } from "../../../store/customers"
+import { useCustomers } from "../../../store/customers/index"
 const { modalCustomer } = storeToRefs( useCustomers())
 const { openModal, storeCustomer } = useCustomers()
 const data = reactive({

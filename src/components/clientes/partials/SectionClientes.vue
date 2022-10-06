@@ -10,16 +10,16 @@
 
 <!-- JS -->
 <script setup>
-import { computed } from "vue"
+import { onMounted } from "vue"
 import { storeToRefs } from "pinia"
-import { useCustomers } from "../../../store/customers"
-const { customers } = storeToRefs( useCustomers())
-const { fetchCustomers } = useCustomers()
-const Customers = computed(() => {
-  return fetchCustomers
-})
-Customers
+import { useCustomers } from "../../../store/customers/index"
+const { customers } = storeToRefs(useCustomers())
+const { getCustomers } = useCustomers()
+
 customers
+onMounted(() => {
+  getCustomers()
+})
 </script>
 
 <!-- CSS -->

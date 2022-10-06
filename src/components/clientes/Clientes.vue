@@ -10,9 +10,9 @@
   import SectionTitulo from './partials/SectionTitulo.vue';
   import ModalAdicionarCliente from './modals/ModalAdicionarCliente.vue'
   import SectionClientes from './partials/SectionClientes.vue';
-  import { useCustomers } from "../../store/customers"
-  const { getCustomers } = useCustomers()
-  getCustomers()
+  // import { useCustomers } from "../../store/customers"
+  // const { getCustomers } = useCustomers()
+  // getCustomers()
 </script>
 
 <style scoped>
